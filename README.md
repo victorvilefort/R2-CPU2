@@ -4,3 +4,5 @@ Quiz temático de Star Wars! <br>
 
 May the force be with you!!
 - Victor Vilefort Saldanha
+<img width="1200" height="700" alt="R2-CPU2" src="https://github.com/user-attachments/assets/d6df6051-3dbe-4173-8a2e-86242deb786a"/>
+
