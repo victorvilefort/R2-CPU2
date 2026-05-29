@@ -10,24 +10,28 @@
 
     <div class="main-quest">
         <div class="main-quest-title">
-            <h1>QUANDO UM PROGRAMA É ABERTO, QUAL COMPONENTE BUSCA INSTRUÇÕES NA MEMÓRIA RAM E REALIZA O PROCESSAMENTO DOS DADOS?</h1>
+            <p></p>
         </div>
     </div>
 
     <div class="alternatives">
         <div class="alternative">
-            <div class="alternative-response"><button>SSD</button></div>
+            <div class="alternative-response-1"><button onclick="selectAnswer(1); nextQuestion();"><p></p></button></div>
         </div>
          <div class="alternative">
-            <div class="alternative-response"><button>CPU</button></div>
+            <div class="alternative-response-2"><button  onclick="selectAnswer(2); nextQuestion();"><p></p></button></div>
         </div>
          <div class="alternative">
-            <div class="alternative-response"><button>FONTE</button></div>
+            <div class="alternative-response-3"><button onclick="selectAnswer(3); nextQuestion();"><p></p></button></div>
         </div>
          <div class="alternative">
-            <div class="alternative-response"><button>PLACA DE REDE</button></div>
+            <div class="alternative-response-4"><button onclick="selectAnswer(4); nextQuestion();"><p></p></button></div>
+        </div>
+        <div class="result">
+            <button onclick="showResult()">Ver Resultado</button>
+            <p>safdjldjflsfajk</p>
         </div>
     </div>
-
 </body>
 </html>
+<script src="script.js"></script>
