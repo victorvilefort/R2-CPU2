@@ -56,10 +56,16 @@ let erros = 0;
 let currentQuestionCounter = 0;
 let currentQuestion = "";
 
+let responseA = document.querySelector(".alternative-response-1 p")
+let responseB = document.querySelector(".alternative-response-2 p")
+let responseC = document.querySelector(".alternative-response-3 p")
+let responseD = document.querySelector(".alternative-response-4 p")
+
 function renderQuestion(){
         currentQuestion = questions[currentQuestionCounter].question;
         let mainQuestion = document.querySelector(".main-quest-title p")
         mainQuestion.innerHTML = `<p>${currentQuestionCounter + 1}) ${currentQuestion}</p>`;
+        responseA.innerHTML = `<p></p>`
 }
 
 function selectAnswer(index){

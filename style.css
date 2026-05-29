@@ -24,6 +24,7 @@ body{
     width: 900px;
     border-radius: 20px;
     margin-left: 500px;
+    margin-bottom: 80px;
 }
 
 .main-quest-title p{
@@ -31,7 +32,7 @@ body{
     align-self: center;
     display: flex;
     padding: 10px;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .alternative-response-1{
@@ -181,7 +182,7 @@ body{
     cursor: pointer;
     transition: all 0.3 ease;
     margin-left: 660px;
-    margin-top: 20px;
+    margin-top: 60px;
 }
 
 .next-question-btn button:hover{
