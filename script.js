@@ -53,19 +53,17 @@ const questions = [
 
 let acertos = 0;
 let erros = 0;
-let currentQuestion = "";
 let currentQuestionCounter = 0;
+let currentQuestion = "";
 
 function renderQuestion(){
-    for (currentQuestionCounter = 0; currentQuestionCounter < questions.length; currentQuestionCounter++) {
         currentQuestion = questions[currentQuestionCounter].question;
         let mainQuestion = document.querySelector(".main-quest-title p")
         mainQuestion.innerHTML = `<p>${currentQuestion}</p>`;
-    }
 }
 
 function selectAnswer(index){
-    if (index === questions.correct){
+    if (index === questions[currentQuestionCounter].correct){
         acertos++   
         console.log(acertos)
     } else{
@@ -75,15 +73,17 @@ function selectAnswer(index){
 }
 
 function nextQuestion(){
-    if(currentQuestion < questions.length){
+    if(currentQuestionCounter < questions.length){
         currentQuestionCounter++
         renderQuestion()
+    } else {
+        showResult()
     }
 }
 
-
 function showResult(){
     let resultQuiz = document.querySelector(".result p")
-    resultQuiz.innerHTML = `<p>Peças Conquistadas: ${acertos} <br> Erros Técnicos: ${erros}</p>` 
+    resultQuiz.innerHTML = `<p>Peças Reparadas: ${acertos} <br> Erros Técnicos: ${erros}</p>` 
 }
+
 renderQuestion();
