@@ -59,7 +59,7 @@ let currentQuestion = "";
 function renderQuestion(){
         currentQuestion = questions[currentQuestionCounter].question;
         let mainQuestion = document.querySelector(".main-quest-title p")
-        mainQuestion.innerHTML = `<p>${currentQuestion}</p>`;
+        mainQuestion.innerHTML = `<p>${currentQuestionCounter + 1}) ${currentQuestion}</p>`;
 }
 
 function selectAnswer(index){
