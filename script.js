@@ -55,6 +55,12 @@ let acertos = 0;
 let erros = 0;
 let currentQuestionCounter = 0;
 let currentQuestion = "";
+let currentAlternative = 0;
+
+let alternativaA = "";
+let alternativaB = "";
+let alternativaC = "";
+let alternativaD = "";
 
 let responseA = document.querySelector(".alternative-response-1 p")
 let responseB = document.querySelector(".alternative-response-2 p")
@@ -62,10 +68,22 @@ let responseC = document.querySelector(".alternative-response-3 p")
 let responseD = document.querySelector(".alternative-response-4 p")
 
 function renderQuestion(){
+
         currentQuestion = questions[currentQuestionCounter].question;
+
+        alternativeA = questions[currentQuestionCounter].alternatives[0]
+        alternativeB = questions[currentQuestionCounter].alternatives[1]
+        alternativeC = questions[currentQuestionCounter].alternatives[2]
+        alternativeD = questions[currentQuestionCounter].alternatives[3]
+
         let mainQuestion = document.querySelector(".main-quest-title p")
+
         mainQuestion.innerHTML = `<p>${currentQuestionCounter + 1}) ${currentQuestion}</p>`;
-        responseA.innerHTML = `<p></p>`
+
+        responseA.innerHTML = `<p>${alternativeA}</p>`
+        responseB.innerHTML = `<p>${alternativeB}</p>`
+        responseC.innerHTML = `<p>${alternativeC}</p>`
+        responseD.innerHTML = `<p>${alternativeD}</p>`
 }
 
 function selectAnswer(index){
