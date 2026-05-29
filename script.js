@@ -54,11 +54,12 @@ const questions = [
 let acertos = 0;
 let erros = 0;
 let currentQuestion = "";
+let currentQuestionCounter = 0;
 
 function renderQuestion(){
-    for (let i = 0; i < questions.length; i++) {
-        currentQuestion = questions[i].question;
-        let mainQuestion = document.querySelector("main-quest-title, p")
+    for (currentQuestionCounter = 0; currentQuestionCounter < questions.length; currentQuestionCounter++) {
+        currentQuestion = questions[currentQuestionCounter].question;
+        let mainQuestion = document.querySelector(".main-quest-title p")
         mainQuestion.innerHTML = `<p>${currentQuestion}</p>`;
     }
 }
@@ -66,20 +67,23 @@ function renderQuestion(){
 function selectAnswer(index){
     if (index === questions.correct){
         acertos++   
+        console.log(acertos)
     } else{
         erros++
+        console.log(erros)
     }
 }
 
 function nextQuestion(){
     if(currentQuestion < questions.length){
+        currentQuestionCounter++
         renderQuestion()
     }
 }
 
 
 function showResult(){
-    let resultQuiz = document.querySelector("result, p'")
-    resultQuiz.innerHTML = `<p>Acertos: ${acertos} Erros: ${erros}</p>` 
+    let resultQuiz = document.querySelector(".result p")
+    resultQuiz.innerHTML = `<p>Peças Conquistadas: ${acertos} <br> Erros Técnicos: ${erros}</p>` 
 }
 renderQuestion();
